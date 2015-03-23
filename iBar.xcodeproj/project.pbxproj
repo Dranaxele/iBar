@@ -13,6 +13,8 @@
 		ACF699851AC05F25006E2548 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF699841AC05F25006E2548 /* Images.xcassets */; };
 		ACF699881AC05F25006E2548 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF699861AC05F25006E2548 /* LaunchScreen.xib */; };
 		ACF699941AC05F25006E2548 /* iBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF699931AC05F25006E2548 /* iBarTests.swift */; };
+		ACF6999F1AC08230006E2548 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF6999E1AC08230006E2548 /* TableViewController.swift */; };
+		ACF699A11AC08547006E2548 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF699A01AC08547006E2548 /* AddController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		ACF6998D1AC05F25006E2548 /* iBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF699921AC05F25006E2548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACF699931AC05F25006E2548 /* iBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBarTests.swift; sourceTree = "<group>"; };
+		ACF6999E1AC08230006E2548 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ACF699A01AC08547006E2548 /* AddController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		ACF6997A1AC05F25006E2548 /* iBar */ = {
 			isa = PBXGroup;
 			children = (
+				ACF6999D1AC08207006E2548 /* Controller */,
 				ACF6997D1AC05F25006E2548 /* AppDelegate.swift */,
 				ACF6997F1AC05F25006E2548 /* ViewController.swift */,
 				ACF699811AC05F25006E2548 /* Main.storyboard */,
@@ -110,6 +115,15 @@
 				ACF699921AC05F25006E2548 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACF6999D1AC08207006E2548 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACF6999E1AC08230006E2548 /* TableViewController.swift */,
+				ACF699A01AC08547006E2548 /* AddController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF699801AC05F25006E2548 /* ViewController.swift in Sources */,
+				ACF6999F1AC08230006E2548 /* TableViewController.swift in Sources */,
 				ACF6997E1AC05F25006E2548 /* AppDelegate.swift in Sources */,
+				ACF699A11AC08547006E2548 /* AddController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,7 @@
 				ACF699991AC05F25006E2548 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACF6999A1AC05F25006E2548 /* Build configuration list for PBXNativeTarget "iBarTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +432,7 @@
 				ACF6999C1AC05F25006E2548 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
