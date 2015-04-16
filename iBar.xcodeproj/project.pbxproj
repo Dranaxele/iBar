@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0E408B1ADFB19D00ABD86A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0E408A1ADFB19D00ABD86A /* Cocktail.swift */; };
+		AC0E408D1ADFD72100ABD86A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0E408C1ADFD72100ABD86A /* DataManager.swift */; };
 		ACF6997E1AC05F25006E2548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF6997D1AC05F25006E2548 /* AppDelegate.swift */; };
 		ACF699801AC05F25006E2548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF6997F1AC05F25006E2548 /* ViewController.swift */; };
 		ACF699831AC05F25006E2548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF699811AC05F25006E2548 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0E408A1ADFB19D00ABD86A /* Cocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		AC0E408C1ADFD72100ABD86A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ACF699781AC05F25006E2548 /* iBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF6997C1AC05F25006E2548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACF6997D1AC05F25006E2548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0E40891ADFB14C00ABD86A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC0E408C1ADFD72100ABD86A /* DataManager.swift */,
+				AC0E408A1ADFB19D00ABD86A /* Cocktail.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		ACF6996F1AC05F25006E2548 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,7 @@
 		ACF6997A1AC05F25006E2548 /* iBar */ = {
 			isa = PBXGroup;
 			children = (
+				AC0E40891ADFB14C00ABD86A /* Model */,
 				ACF6999D1AC08207006E2548 /* Controller */,
 				ACF6997D1AC05F25006E2548 /* AppDelegate.swift */,
 				ACF6997F1AC05F25006E2548 /* ViewController.swift */,
@@ -227,8 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF699801AC05F25006E2548 /* ViewController.swift in Sources */,
+				AC0E408D1ADFD72100ABD86A /* DataManager.swift in Sources */,
 				ACF6999F1AC08230006E2548 /* TableViewController.swift in Sources */,
 				ACF6997E1AC05F25006E2548 /* AppDelegate.swift in Sources */,
+				AC0E408B1ADFB19D00ABD86A /* Cocktail.swift in Sources */,
 				ACF699A11AC08547006E2548 /* AddController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
