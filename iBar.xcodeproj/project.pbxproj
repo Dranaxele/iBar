@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AC0E408B1ADFB19D00ABD86A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0E408A1ADFB19D00ABD86A /* Cocktail.swift */; };
-		AC0E408D1ADFD72100ABD86A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0E408C1ADFD72100ABD86A /* DataManager.swift */; };
 		ACF6997E1AC05F25006E2548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF6997D1AC05F25006E2548 /* AppDelegate.swift */; };
 		ACF699801AC05F25006E2548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF6997F1AC05F25006E2548 /* ViewController.swift */; };
 		ACF699831AC05F25006E2548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF699811AC05F25006E2548 /* Main.storyboard */; };
@@ -17,6 +16,8 @@
 		ACF699941AC05F25006E2548 /* iBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF699931AC05F25006E2548 /* iBarTests.swift */; };
 		ACF6999F1AC08230006E2548 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF6999E1AC08230006E2548 /* TableViewController.swift */; };
 		ACF699A11AC08547006E2548 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF699A01AC08547006E2548 /* AddController.swift */; };
+		ACFD81ED1AE157E600081C06 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD81EC1AE157E600081C06 /* SwiftyJSON.swift */; };
+		ACFD81EF1AE15D6800081C06 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD81EE1AE15D6800081C06 /* ItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,6 @@
 
 /* Begin PBXFileReference section */
 		AC0E408A1ADFB19D00ABD86A /* Cocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
-		AC0E408C1ADFD72100ABD86A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ACF699781AC05F25006E2548 /* iBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF6997C1AC05F25006E2548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACF6997D1AC05F25006E2548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		ACF699931AC05F25006E2548 /* iBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBarTests.swift; sourceTree = "<group>"; };
 		ACF6999E1AC08230006E2548 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		ACF699A01AC08547006E2548 /* AddController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
+		ACFD81EC1AE157E600081C06 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		ACFD81EE1AE15D6800081C06 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,7 @@
 		AC0E40891ADFB14C00ABD86A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AC0E408C1ADFD72100ABD86A /* DataManager.swift */,
+				ACFD81EC1AE157E600081C06 /* SwiftyJSON.swift */,
 				AC0E408A1ADFB19D00ABD86A /* Cocktail.swift */,
 			);
 			name = Model;
@@ -136,6 +138,7 @@
 			children = (
 				ACF6999E1AC08230006E2548 /* TableViewController.swift */,
 				ACF699A01AC08547006E2548 /* AddController.swift */,
+				ACFD81EE1AE15D6800081C06 /* ItemViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -240,11 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFD81EF1AE15D6800081C06 /* ItemViewController.swift in Sources */,
 				ACF699801AC05F25006E2548 /* ViewController.swift in Sources */,
-				AC0E408D1ADFD72100ABD86A /* DataManager.swift in Sources */,
 				ACF6999F1AC08230006E2548 /* TableViewController.swift in Sources */,
 				ACF6997E1AC05F25006E2548 /* AppDelegate.swift in Sources */,
 				AC0E408B1ADFB19D00ABD86A /* Cocktail.swift in Sources */,
+				ACFD81ED1AE157E600081C06 /* SwiftyJSON.swift in Sources */,
 				ACF699A11AC08547006E2548 /* AddController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

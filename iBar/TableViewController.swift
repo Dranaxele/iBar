@@ -11,7 +11,6 @@ import UIKit
 class TableViewController: UITableViewController {
 
     @IBOutlet var listCocktailView: UITableView!
-    var items : [String] = ["We", "Heart", "Swift"]
     var lstC : [Cocktail] = []
     
     
@@ -22,35 +21,23 @@ class TableViewController: UITableViewController {
         listCocktailView.delegate = self
         listCocktailView.dataSource = self
         
-        /*DataManager.getCocktail{ (CocktailData) -> Void in
-            var parseError: NSError?
-            let parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(CocktailData,
-                options: NSJSONReadingOptions.AllowFragments,
-                error:&parseError)
-            
-            //2
-            if let Cocktails = parsedObject as? NSDictionary {
-                if let nom = Cocktails["nom_cocktail"] as? NSDictionary {
-                    println("Nom du Cocktail: \(nom)")
-                }
-            }
-        }*/
         
-        var endpoint = NSURL(string: "http://192.168.1.11/api.php")
+        var endpoint = NSURL(string: "http://192.168.1.11/iBar/api.php")
         var data = NSData(contentsOfURL: endpoint!)
-        println("Test: \(data?.description)")
-        if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
-            println("Voila le JSON: \(json)")
-            if let items = json["items"] as? NSArray {
-                println("Data recup'")
-                for item in items {
-                    // construct your model objects here
-                }
-            }
+        
+        let json = JSON(data: data!)
+        
+        for (index: String, subJson: JSON) in json {
+            lstC.append(Cocktail(id: subJson["id"].stringValue,
+                nom: subJson["nom_cocktail"].stringValue,
+                type: subJson["type_cocktail"].stringValue,
+                categ: subJson["categorie_cocktail"].stringValue,
+                difficulte: subJson["difficulte_cocktail"].stringValue,
+                contenance: subJson["contenance_cocktail"].stringValue,
+                alcool: subJson["alcool_cocktail"].stringValue))
         }
         
-        //self.listCocktailView.registerClass(UITableView.self, forCellReuseIdentifier: "cell")
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -74,14 +61,14 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return items.count
+        return lstC.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = listCocktailView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
 
-        cell.textLabel?.text = self.items[indexPath.row]
+        cell.textLabel?.text = self.lstC[indexPath.row].nomC
 
         return cell
     }
@@ -94,7 +81,7 @@ class TableViewController: UITableViewController {
         listCocktailView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-        println(items[row])
+        println(lstC[row])
     }
     
 
@@ -125,14 +112,17 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        let destinationVC = segue.destinationViewController as ItemViewController
+        let indexPath = self.listCocktailView.indexPathForSelectedRow()
+        destinationVC.itemCocktail = lstC[indexPath!.row]
     }
-    */
+
 
 }
