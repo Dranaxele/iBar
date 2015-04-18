@@ -30,11 +30,11 @@ class TableViewController: UITableViewController {
         for (index: String, subJson: JSON) in json {
             lstC.append(Cocktail(id: subJson["id"].stringValue,
                 nom: subJson["nom_cocktail"].stringValue,
-                type: subJson["type_cocktail"].stringValue,
-                categ: subJson["categorie_cocktail"].stringValue,
-                difficulte: subJson["difficulte_cocktail"].stringValue,
-                contenance: subJson["contenance_cocktail"].stringValue,
-                alcool: subJson["alcool_cocktail"].stringValue))
+                type: subJson["nom_type"].stringValue,
+                categ: subJson["nom_categorie"].stringValue,
+                difficulte: subJson["nom_difficulte"].stringValue,
+                contenance: subJson["nom_contenance"].stringValue,
+                alcool: subJson["nom_alcool"].stringValue))
         }
         
         
@@ -119,10 +119,11 @@ class TableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        let destinationVC = segue.destinationViewController as ItemViewController
-        let indexPath = self.listCocktailView.indexPathForSelectedRow()
-        destinationVC.itemCocktail = lstC[indexPath!.row]
+        println("SEGUE id: \(segue.identifier)")
+        if (segue.identifier == "item"){
+            let destinationVC = segue.destinationViewController as ItemViewController
+            let indexPath = self.listCocktailView.indexPathForSelectedRow()
+            destinationVC.itemCocktail = lstC[indexPath!.row]
+        }
     }
-
-
 }

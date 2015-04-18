@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController id="MY7-3x-Pkw" customClass="TableViewController" customModule="iBar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nGJ-89-jYd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -27,7 +27,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="F3f-nJ-x8c" kind="show" id="BY2-tU-EeV"/>
+                                    <segue destination="F3f-nJ-x8c" kind="show" identifier="item" id="kuW-iI-uwo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -37,12 +37,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="iBar" id="L0j-NZ-kFQ">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="BoS-lh-1wW">
+                        <barButtonItem key="rightBarButtonItem" title="New Cocktail" style="plain" id="BoS-lh-1wW">
                             <connections>
-                                <segue destination="n8o-E3-5EQ" kind="show" id="3Ct-lm-siv"/>
+                                <segue destination="n8o-E3-5EQ" kind="show" identifier="add" id="1X1-0V-rot"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="listCocktailView" destination="nGJ-89-jYd" id="Gvp-Dn-9Do"/>
                     </connections>
@@ -60,7 +61,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9eg-gH-Tw7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3UW-Ol-H61">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5X-qe-nG3">
@@ -146,6 +147,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="Categorie" destination="Ij4-4i-odJ" id="Do2-BU-ORi"/>
+                        <outlet property="Contenant" destination="qzU-KH-FjF" id="rLr-tM-LFD"/>
+                        <outlet property="Difficulte" destination="5bP-Kz-fii" id="cFR-Pf-ESw"/>
+                        <outlet property="Nom" destination="5xo-RC-2Ps" id="O6p-6e-HSc"/>
+                        <outlet property="Type" destination="Amy-gE-ct3" id="E33-ss-inQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1Y-6v-4Y9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +168,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qmD-po-BYB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lJf-Gq-YmC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ron-vF-0qU">

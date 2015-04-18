@@ -10,10 +10,16 @@ import UIKit
 
 class AddController: UIViewController {
 
+    @IBOutlet weak var Nom: UITextField!
+    @IBOutlet weak var Type: UITextField!
+    @IBOutlet weak var Categorie: UITextField!
+    @IBOutlet weak var Difficulte: UITextField!
+    @IBOutlet weak var Contenant: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        // TODO: Charger les differents contenant pour la liste avec le services web (API)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,17 +29,8 @@ class AddController: UIViewController {
     
 
     @IBAction func SaveButton(sender: AnyObject) {
+        // TODO: Envoyer une requete HTTP POST afin de permettre l'enregistrement dans la base de données
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
