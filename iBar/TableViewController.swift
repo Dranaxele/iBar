@@ -22,7 +22,8 @@ class TableViewController: UITableViewController {
         listCocktailView.dataSource = self
         
         
-        var endpoint = NSURL(string: "http://192.168.1.11/iBar/api.php")
+        //var endpoint = NSURL(string: "http://192.168.1.11/iBar/api.php")
+        var endpoint = NSURL(string: "http://alexandreplaitant.dds.net/iBar/api.php")
         var data = NSData(contentsOfURL: endpoint!)
         
         let json = JSON(data: data!)
