@@ -69,7 +69,7 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = listCocktailView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
 
-        cell.textLabel?.text = self.lstC[indexPath.row].nomC
+        cell.textLabel.text = self.lstC[indexPath.row].nomC
 
         return cell
     }
