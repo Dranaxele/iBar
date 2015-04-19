@@ -31,6 +31,18 @@ class AddController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // TODO: Charger les differents contenant pour la liste avec le services web (API)
+        
+    }
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    @IBAction func SaveButton(sender: AnyObject) {
+        // TODO: Envoyer une requete HTTP POST afin de permettre l'enregistrement dans la base de données
         let request = NSMutableURLRequest(URL: NSURL(string: "http://alexandreplaitant.ddns.net/iBar/api.php")!)
         request.HTTPMethod = "POST"
         let postString = "Nom=/(Nom.text)&Type=/(Type.text)&Categorie=/(Categorie.text)&Difficulté=/(Difficulte.text)&Contenant=/(Contenant)"
@@ -49,18 +61,6 @@ class AddController: UIViewController {
             println("responseString = \(responseString)")
         }
         task.resume()
-    }
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    @IBAction func SaveButton(sender: AnyObject) {
-        // TODO: Envoyer une requete HTTP POST afin de permettre l'enregistrement dans la base de données
-        
     }
 
 }
